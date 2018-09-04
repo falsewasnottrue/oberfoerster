@@ -1,0 +1,28 @@
+NAME	Gruppe2xgleich0
+
+MODE    PROOF
+
+SORTS	ANY
+
+SIGNATURE
+	+ : ANY ANY -> ANY
+        - :     ANY -> ANY
+        0 :         -> ANY
+        a,b :       -> ANY % skolem
+
+ORDERING KBO
+	- = 1, + = 1, 0 = 1, a = 1, b = 1
+	- > + > 0 > a > b
+
+VARIABLES
+	x,y,z : ANY
+
+EQUATIONS
+        ((x + y) + z) = (x + (y + z))
+        (x + 0)       = x
+        (x + -(x))    = 0
+
+        (x + x)       = 0
+
+CONCLUSION
+        (a + b) = (b + a)
